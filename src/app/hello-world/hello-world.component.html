@@ -1,0 +1,13 @@
+<h2>Desde hello-world Component</h2>
+<form (submit)="addUser(newUser)">
+  <input type="text" #newUser>
+  <button>Agregar Usuario</button>
+</form>
+<ul *ngFor="let user of users">
+  <li>{{ user }} - <button (click)="deleteUser(user)">Delete</button></li>
+</ul>
+<hr>
+<ul *ngFor="let user of users">
+  <app-user [nameUser]="user"></app-user>
+</ul>
+<button (click)="sayHello()">Hazme Click!</button>
